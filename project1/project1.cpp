@@ -5,13 +5,13 @@ int main()
 {
   int row1,column1,row2,column2,temp,i,r,c;
   vector<int> v1,v2,v3;
-  cout<<"please input the number of rows of the first matrix: ";
+  //cout<<"please input the number of rows of the first matrix: ";
   cin>>row1;
-  cout<<"please input the number of columns of the first matrix: ";
+  //cout<<"please input the number of columns of the first matrix: ";
   cin>>column1;
-  cout<<"please input the number of rows of the second matrix: ";
+  //cout<<"please input the number of rows of the second matrix: ";
   cin>>row2;
-  cout<<"please input the number of columns of the second matrix: ";
+  //cout<<"please input the number of columns of the second matrix: ";
   cin>>column2;
   if(column1!=row2){
     cout<<"Invalid Input"<<endl;
@@ -19,12 +19,12 @@ int main()
   }
   else{ 
   for (i=0;i<row1*column1;i++){
-  cout<<"please input the next number of matrix one: ";
+    //cout<<"please input the next number of matrix one: ";
   cin>>temp;
   v1.push_back(temp);
   }
   for (i=0;i<row2*column2;i++){
-  cout<<"please input the next number of matrix two: ";
+    //cout<<"please input the next number of matrix two: ";
   cin>>temp;
   v2.push_back(temp);
   }
@@ -39,14 +39,27 @@ for (r=0;r<row1;r++){
     v3.push_back(temp);
   }
  }
- cout<<v3.size()<<endl;
-  cout<<v3.at(1)<<endl;
-  cout<<v3.at(2)<<endl;
-  cout<<v3.at(3)<<endl;
 
-
-
-
+for (r=0;r<row1;r++){
+  for (c=0;c<column1;c++){
+    cout<<v1.at(r*column1+c)<<" ";
+  }
+  cout<<endl;
+ }
+cout<<endl;
+for (r=0;r<row2;r++){
+  for (c=0;c<column2;c++){
+    cout<<v2.at(r*column2+c)<<" ";
+  }
+  cout<<endl;
+ }
+cout<<endl;
+for (r=0;r<row1;r++){
+  for (c=0;c<column2;c++){
+    cout<<v3.at(r*column2+c)<<" ";
+  }
+  cout<<endl;
+ }
 
   return 0;
 }
