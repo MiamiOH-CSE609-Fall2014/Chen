@@ -13,7 +13,7 @@ int main()
   cin>>row2;
   //cout<<"please input the number of columns of the second matrix: ";
   cin>>column2;
-  if(column1!=row2){
+  if(column1!=row2||row1<1||row2<1||column1<1||column2<1){
     cout<<"Invalid Input"<<endl;
   return 1;
   }
