@@ -37,7 +37,7 @@ pair<int,int> scoreSequence(string haystack,string needle,vector< vector<int> > 
       ts = "";
     }
     //cout<<sum<<endl;
-    if(sum>maxscore){
+    if(sum>=maxscore){
       maxscore = sum;
       maxpos = i;
     }
@@ -45,5 +45,6 @@ pair<int,int> scoreSequence(string haystack,string needle,vector< vector<int> > 
   pair<int,int> posscore;
   posscore.first = maxpos;
   posscore.second = maxscore;
+  cout<<"needle: "<<needle<<"  maxposition: "<<maxpos<<"  maxscore: "<<maxscore<<endl;
   return posscore;
 }

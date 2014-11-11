@@ -77,7 +77,7 @@ int main(){
     for(i=0;i<num;i++){
       varsc+=pow(scores.at(i)-meansc,2);
     }
-    varsc = sqrt(varsc);
+    varsc = sqrt(varsc/num);
     cout<<endl<<"Grading Scale"<<endl;
     cout<<"A  Above "<<showpoint<<min(100.00,meansc+1.5*varsc)<<"%"<<endl;
     cout<<"B  "<<showpoint<<max(0.00,meansc+0.5*varsc)<<"% - "<<min(100.00,meansc+1.5*varsc)<<"%"<<endl;
